@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>is_voice_enabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>max_free_chats_per_day</key>
+        <value>10</value>
+    </entry>
+    <entry>
+        <key>show_premium_banner</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>daily_tip_list</key>
+        <value>[]</value>
+    </entry>
+</defaultsMap>
