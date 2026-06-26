@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvHeaderTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="12dp"
+    android:textColor="@color/hezini_purple"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:fontFamily="@font/space_grotesk"
+    android:textAllCaps="true"
+    android:letterSpacing="0.1"
+    tools:text="Today"
+    xmlns:tools="http://schemas.android.com/tools" />
