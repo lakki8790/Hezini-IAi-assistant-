@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text Colors (Dark Mode Overrides) -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B7C3</color>
+    <color name="text_hint">#6B7280</color>
+
+    <!-- Note: Surface colors like surface_dark, surface_card, etc.
+         are used in Theme.Hezini for dark mode. -->
+</resources>
