@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hezini.assistant.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.hezini.assistant.ui.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="sessionId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/voiceAssistantFragment"
+        android:name="com.hezini.assistant.ui.voice.VoiceAssistantFragment"
+        android:label="Voice"
+        tools:layout="@layout/fragment_voice_assistant" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.hezini.assistant.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.hezini.assistant.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hezini.assistant.ui.settings.SettingsFragment"
+        android:label="Settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_languageSelectionFragment"
+            app:destination="@id/languageSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/languageSelectionFragment"
+        android:name="com.hezini.assistant.ui.settings.LanguageSelectionFragment"
+        android:label="Select Language"
+        tools:layout="@layout/fragment_language_selection" />
+
+    <!-- Premium Tools -->
+    <fragment
+        android:id="@+id/toolsFragment"
+        android:name="com.hezini.assistant.ui.tools.ToolsFragment"
+        android:label="AI Tools"
+        tools:layout="@layout/fragment_tools">
+        <action
+            android:id="@+id/action_toolsFragment_to_summarizerFragment"
+            app:destination="@id/summarizerFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_translatorFragment"
+            app:destination="@id/translatorFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_codeFragment"
+            app:destination="@id/codeFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_writingFragment"
+            app:destination="@id/writingFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_brainstormFragment"
+            app:destination="@id/brainstormFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_imageDescriberFragment"
+            app:destination="@id/imageDescriberFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_imageGenFragment"
+            app:destination="@id/imageGenFragment" />
+        <action
+            android:id="@+id/action_toolsFragment_to_documentAnalysisFragment"
+            app:destination="@id/documentAnalysisFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/summarizerFragment"
+        android:name="com.hezini.assistant.ui.tools.summarizer.SummarizerFragment"
+        android:label="Summarizer"
+        tools:layout="@layout/fragment_summarizer" />
+
+    <fragment
+        android:id="@+id/translatorFragment"
+        android:name="com.hezini.assistant.ui.tools.translator.TranslatorFragment"
+        android:label="Translator"
+        tools:layout="@layout/fragment_translator" />
+
+    <fragment
+        android:id="@+id/codeFragment"
+        android:name="com.hezini.assistant.ui.tools.code.CodeFragment"
+        android:label="Code Assistant"
+        tools:layout="@layout/fragment_code" />
+
+    <fragment
+        android:id="@+id/writingFragment"
+        android:name="com.hezini.assistant.ui.tools.writing.WritingFragment"
+        android:label="Writing Assistant"
+        tools:layout="@layout/fragment_writing" />
+
+    <fragment
+        android:id="@+id/brainstormFragment"
+        android:name="com.hezini.assistant.ui.tools.brainstorm.BrainstormFragment"
+        android:label="Brainstorm"
+        tools:layout="@layout/fragment_brainstorm" />
+
+    <fragment
+        android:id="@+id/imageDescriberFragment"
+        android:name="com.hezini.assistant.ui.tools.vision.ImageDescriberFragment"
+        android:label="Image Vision"
+        tools:layout="@layout/fragment_image_describer" />
+
+    <fragment
+        android:id="@+id/imageGenFragment"
+        android:name="com.hezini.assistant.ui.tools.image.ImageGenFragment"
+        android:label="AI Image Studio"
+        tools:layout="@layout/fragment_image_gen">
+        <action
+            android:id="@+id/action_imageGenFragment_to_imageGalleryFragment"
+            app:destination="@id/imageGalleryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/imageGalleryFragment"
+        android:name="com.hezini.assistant.ui.tools.image.ImageGalleryFragment"
+        android:label="My Creations"
+        tools:layout="@layout/fragment_image_gallery" />
+
+    <fragment
+        android:id="@+id/documentAnalysisFragment"
+        android:name="com.hezini.assistant.ui.tools.document.DocumentAnalysisFragment"
+        android:label="Document AI"
+        tools:layout="@layout/fragment_document_analysis">
+        <action
+            android:id="@+id/action_documentAnalysisFragment_to_documentHistoryFragment"
+            app:destination="@id/documentHistoryFragment" />
+        <argument
+            android:name="fileUri"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/documentHistoryFragment"
+        android:name="com.hezini.assistant.ui.tools.document.DocumentHistoryFragment"
+        android:label="Analysis History"
+        tools:layout="@layout/fragment_document_history" />
+
+    <fragment
+        android:id="@+id/personasFragment"
+        android:name="com.hezini.assistant.ui.personas.PersonasFragment"
+        android:label="AI Personas"
+        tools:layout="@layout/fragment_personas" />
+
+</navigation>
